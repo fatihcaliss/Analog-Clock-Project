@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+}
+.clock {
+    height: 800px;
+    width: 800px;
+    border-radius: 50%;
+    background: url(./ios_clock.svg) no-repeat rgb(236, 236, 236);
+    background-size: 90%;
+    background-position: center;
+    border: dashed 20px gray;
+    position: relative;
+    outline: 20px;
+    outline-style: solid;
+    outline-color: rgb(0, 0, 0);
+    box-shadow: 0px 0px 30px 30px white;
+
+}
+.second  {
+    position: absolute;
+    width: 3px;
+    height: 280px;
+    background-color: rgb(248, 4, 4);
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: top;
+    /* animation: seco  60s linear infinite; */
+    /* animation-play-state: running; */
+    border-radius: 40%;
+}
+
+/* @keyframes seco {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}    
+} */
+
+.hour  {
+    position: absolute;
+    width: 7px;
+    height: 170px;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* animation: hour  60s*60*24 linear infinite;
+    animation-play-state: running; */
+    transform-origin: top;
+    border-radius: 30%;
+}
+
+/* @keyframes hour {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}    
+} */
+.minute  {
+    position: absolute;
+    width: 5px;
+    height: 250px;
+    background-color: rgb(2, 2, 2);
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* animation: minute  60s linear forwards;
+    animation-play-state: running; */
+    transform-origin: top;
+    border-radius: 30%;
+} 
+/* @keyframes minute {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(6deg);}
+} */
+.dot {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background-color: black;
+    top: 373px;
+    left: 365px;
+    border-radius: 50%;
+    transform-origin: top;
+} 
